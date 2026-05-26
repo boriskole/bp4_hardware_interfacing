@@ -6,6 +6,8 @@ void setup() {
     for (int i = 0; i < digitalPinCount; i++) {
         pinMode(usedDigitalPins[i], OUTPUT);
     }
+
+    Serial.begin(9600);
 }
 
 void loop() {
@@ -27,6 +29,8 @@ void loop() {
 int getActiveLedCount() {
     // Waarde ophalen uit de potmeter.
     int rawPotmeterValue = analogRead(A0);
+
+    Serial.println(rawPotmeterValue);
 
     // De waarde van de potmeter omzetten naar een lichtniveau 0 t/m 7.
     return map(rawPotmeterValue, 0, 1023, 0, 8);
