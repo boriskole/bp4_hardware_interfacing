@@ -60,7 +60,7 @@ void rotateServo() {
 
 }
 
-void moveServoDirection() {
+void moveServoLeft() {
   servoPosition = constrain(servoPosition, 0, 180); // Zorgen dat de positie niet te ver buiten te max en min kan gaan.
   servoMotor.write(servoPosition -= 1);
   delay(20);
