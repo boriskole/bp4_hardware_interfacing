@@ -61,13 +61,13 @@ void rotateServo() {
 }
 
 void moveServoDirection() {
-  servoPosition = constrain(servoPosition, 0, 180); // Zorgen dat de positie niet te vern buiten te max en min kan gaan.
+  servoPosition = constrain(servoPosition, 0, 180); // Zorgen dat de positie niet te ver buiten te max en min kan gaan.
   servoMotor.write(servoPosition -= 1);
   delay(20);
 }
 
 void moveServoRight() {
-  servoPosition = constrain(servoPosition, 0, 180); // Zorgen dat de positie niet te vern buiten te max en min kan gaan.
+  servoPosition = constrain(servoPosition, 0, 180); // Zorgen dat de positie niet te ver buiten te max en min kan gaan.
   servoMotor.write(servoPosition += 1);
   delay(20);
 }

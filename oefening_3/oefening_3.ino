@@ -36,7 +36,7 @@ void toggleButton() {
   
 }
 
-boolean isButtonPressedDown() {
+bool isButtonPressedDown() {
   return currentButtonState == HIGH
   && lastButtonState == LOW; // Dit deel zorgt ervoor dat de knop eerst weer een keer omhoog moet gaan om nog een keer geactiveerd te kunnen worden.
 }

@@ -15,11 +15,10 @@ void loop() {
     // Aantal LED's die aangezet moeten worden ophalen.
     int activeLedCount = getActiveLedCount();
 
-    // Zet LEDs aan tot aan activeLedCount.
     for (int i = 0; i < digitalPinCount; i++) {
         digitalWrite(
             usedDigitalPins[i],
-            i < activeLedCount ? HIGH : LOW
+            i < activeLedCount ? HIGH : LOW  // Zet LEDs aan tot aan activeLedCount.
         );
     }
 
